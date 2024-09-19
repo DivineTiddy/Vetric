@@ -3,6 +3,7 @@ import Herro from "./Herro";
 import Perks from "./Perks";
 import Companies from "./Companies";
 import Pricing from "./Pricing";
+import Bento from "./Bento";
 
 const MainContent = styled.div`
   display: inline-flex;
@@ -19,6 +20,7 @@ const Main = () => {
   <Perks/>
   <Companies/>
   <Pricing/>
+  <Bento/>
   </MainContent>
   );
 };

@@ -64,6 +64,16 @@ ${(props) =>
       font-weight: 400;
       line-height: normal;
     `}
+    ${(props) =>
+    props.type === "Para7" &&
+    css`
+      color: var(--colors-alias-black-white-black-800, #4D4F5C);
+      font-family: Manrope;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22.4px;
+    `}
 `
 
 

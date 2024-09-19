@@ -12,6 +12,7 @@ const Buttons = styled.button`
   ${(props) =>
     props.type === "contact" &&
     css`
+    width: auto;
       border: 1px solid rgba(0, 0, 0, 0.5);
       color: var(--colors-alias-black-white-black-900, #07070a);
     `}
@@ -22,6 +23,14 @@ const Buttons = styled.button`
       border-radius: 8px;
       border: 1px solid rgba(0, 0, 0, 0.3);
       background-color: white;
+    `}
+    ${(props) =>
+    props.type === "TeamBtn" &&
+    css`
+      width: 206.5px;
+      height: 52px;
+      border-radius: 80px;
+      border: 0.5px solid #7A7B85;
     `}
     display: flex;
   padding: 10px 20px;

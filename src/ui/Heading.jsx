@@ -62,6 +62,17 @@ const Heading = styled.h1`
       line-height: normal;
     `}
     ${(props) =>
+    props.type === "ServiceText" &&
+    css`
+      color: var(--colors-alias-black-white-black-800, #0d0e14);
+      text-align: start;
+      font-family: Manrope;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 22.4px; /* 141.102% */
+    `}
+    ${(props) =>
     props.as === "p" &&
     css`
       color: var(--colors-alias-black-white-black-400, #4d4f5c);

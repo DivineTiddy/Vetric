@@ -14,6 +14,6 @@ const Segmented = ({children}) => {
   </SegmentedLayout>;
 };
 Segmented.propTypes = {
-  children: propTypes.string.isRequired,
+  children: propTypes.array.isRequired,
 };
 export default Segmented;

@@ -10,9 +10,9 @@ import ServiceIcon4 from "../../assets/icons/ServiceIcon4";
 import ServiceIcon5 from "../../assets/icons/ServiceIcon5";
 import TeamIcon from "../../assets/icons/TeamIcon";
 import TeamIcon2 from "../../assets/icons/TeamIcon2";
-
+import BlochainIcons from "../../assets/icons/BlochainIcons";
 const api =
-  " // SPDX-License-Identifier: MITpragma solidity ^0.8.0;import ./IERC20.sol ;contract MyToken is IERC20 {    string public name = MyToken;    string public symbol = MT;    uint256 public override totalSupply;    mapping(address => uint256) public override balanceOf;    mapping(address => mapping(address => uint256)) public override allowance;";
+  " // SPDX-License-Identifier: MITpragma solidity ^0.8.0; import ./IERC20.sol ;contract MyToken is IERC20 {    string public name = MyToken;    string public symbol = MT;    uint256 public override totalSupply;    mapping(address => uint256) public override balanceOf;    mapping(address => mapping(address => uint256)) public override allowance;";
 const BentoLayout = styled.div`
   width: auto;
   height: 2091px;
@@ -67,6 +67,7 @@ const TeamLayout = styled.div`
   flex-direction: column;
   border: 1px solid #d3d3d6;
   border-radius: 16px;
+  padding: 24px 0px;
 `;
 const TeamText = styled.div`
   width: 342px;
@@ -94,14 +95,31 @@ const TeamButtonLayout = styled.div`
 `;
 const PowerfulLayout = styled.div`
   width: auto;
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  padding: 24px 0px;
+  border: 1px solid #d3d3d6;
+`;
+const ApiLayout = styled.div`
+  width: 342px;
+  height: 243.6px;
+`;
+const BestLayout = styled.div`
+   width: auto;
   height: 380px;
   display: flex;
   flex-direction: column;
   gap: 27px;
-`;
-const ApiLayout = styled.div`
-width: 342px;
-height: 243.6px;
+  padding: 24px 0px;
+  border: 1px solid #d3d3d6;
+`
+const ButtonLayout = styled.div`
+width: 279px;
+height: 222px;
+display: flex;
+flex-direction: column;
 `
 
 const Bento = () => {
@@ -119,7 +137,7 @@ const Bento = () => {
         <CalendarLayout>
           <ServiceLayout>
             <TeamText>
-            <Heading type="ServiceText">Ready to go services</Heading>
+              <Heading type="ServiceText">Ready to go services</Heading>
               <Text type="Para7">
                 {" "}
                 Streamlining solutions for swift success
@@ -211,20 +229,44 @@ const Bento = () => {
             </TeamIconLayout>
           </TeamLayout>
           {/* POWERFULL LAYOUT ................ */}
-          <TeamLayout>
-            <PowerfulLayout>
-              <TeamText>
-                <Heading type="ServiceText">Ready to go services</Heading>
-                <Text type="Para7">
-                  {" "}
-                  Streamlining solutions for swift success
-                </Text>
-              </TeamText>
-              <ApiLayout>
-                <Text type="Para7">{api}</Text>
-              </ApiLayout>
-            </PowerfulLayout>
-          </TeamLayout>
+          <PowerfulLayout>
+            <TeamText>
+              <Heading type="ServiceText">Ready to go services</Heading>
+              <Text type="Para7">
+                {" "}
+                Streamlining solutions for swift success
+              </Text>
+            </TeamText>
+            <ApiLayout>
+              <Text type="Para7">{api}</Text>
+            </ApiLayout>
+          </PowerfulLayout>
+          {/* BLOCKCHAIN LOGOS .................. */}
+          <BestLayout>
+          <TeamText>
+              <Heading type="ServiceText">The best blockchains out there</Heading>
+              <Text type="Para7">
+                {" "}
+                Pioneering paths in decentralized solutions
+              </Text>
+            </TeamText>
+            <BlochainIcons/>
+
+          </BestLayout>
+          {/* DEVELOPMENT .................... */}
+        <BestLayout>
+        <TeamText>
+              <Heading type="ServiceText">Web 3.0 development</Heading>
+              <Text type="Para7">
+                {" "}
+                Crafting tomorrows digital landscape today
+              </Text>
+            </TeamText>
+            <ButtonLayout>
+              
+            </ButtonLayout>
+
+        </BestLayout>
         </CalendarLayout>
       </BentoLayout>
     </div>

@@ -11,6 +11,8 @@ import ServiceIcon5 from "../../assets/icons/ServiceIcon5";
 import TeamIcon from "../../assets/icons/TeamIcon";
 import TeamIcon2 from "../../assets/icons/TeamIcon2";
 
+const api =
+  " // SPDX-License-Identifier: MITpragma solidity ^0.8.0;import ./IERC20.sol ;contract MyToken is IERC20 {    string public name = MyToken;    string public symbol = MT;    uint256 public override totalSupply;    mapping(address => uint256) public override balanceOf;    mapping(address => mapping(address => uint256)) public override allowance;";
 const BentoLayout = styled.div`
   width: auto;
   height: 2091px;
@@ -37,22 +39,22 @@ const CalendarLayout = styled.div`
   gap: 32px;
 `;
 const ServiceLayout = styled.div`
-  width: 330px;
+  width: 340px;
   height: 317px;
   display: flex;
   gap: 24.13px;
-  padding: 24px;
   flex-direction: column;
   overflow: hidden;
+  padding: 24px 0px;
 `;
-const TextLayout = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: start !important;
-  width: auto;
-  height: 61.4px;
-  gap: 16px;
-`;
+// const TextLayout = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   text-align: start !important;
+//   width: auto;
+//   height: 61.4px;
+//   gap: 16px;
+// `;
 const StyledIcon = styled.div`
   width: 18.45px;
   height: 14.76px;
@@ -60,7 +62,6 @@ const StyledIcon = styled.div`
 const TeamLayout = styled.div`
   width: auto;
   height: 317px;
-  padding: 24px;
   display: flex;
   gap: 45px;
   flex-direction: column;
@@ -91,111 +92,142 @@ const TeamButtonLayout = styled.div`
   justify-content: center;
   align-items: center;
 `;
+const PowerfulLayout = styled.div`
+  width: auto;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+`;
+const ApiLayout = styled.div`
+width: 342px;
+height: 243.6px;
+`
 
 const Bento = () => {
   return (
-    <BentoLayout>
-      {/* HEADING ..................... */}
-      <BentoParaContainer>
-        <Heading as="h3">Explore Our Feature</Heading>
-        <Text type="Para2">
-          Discover the powerful features that make our platform stand out
-        </Text>
-      </BentoParaContainer>
-      {/* MAIN.......................... */}
-      <CalendarLayout>
-        <ServiceLayout>
-          <TextLayout>
+    <div>
+      <BentoLayout>
+        {/* HEADING ..................... */}
+        <BentoParaContainer>
+          <Heading as="h3">Explore Our Feature</Heading>
+          <Text type="Para2">
+            Discover the powerful features that make our platform stand out
+          </Text>
+        </BentoParaContainer>
+        {/* MAIN.......................... */}
+        <CalendarLayout>
+          <ServiceLayout>
+            <TeamText>
             <Heading type="ServiceText">Ready to go services</Heading>
-            <Text type="Para7"> Streamlining solutions for swift success</Text>
-          </TextLayout>
-          {/* SEGMENTED 1 ......................... */}
-          <Segmented>
-            <Buttons type="contact">
-              <StyledIcon>
-                <ServiceIcon1 />
-              </StyledIcon>
-              Powerful APIs
-            </Buttons>
-            <Buttons type="contact">
-              <StyledIcon>
-                <ServiceIcon2 />
-              </StyledIcon>
-              For Design
-            </Buttons>
-            <Buttons type="contact">
-              <StyledIcon>
-                <ServiceIcon3 />
-              </StyledIcon>
-              Cybersecurity
-            </Buttons>
-          </Segmented>
-          {/* SEGMENTED 2 ......................... */}
-          <Segmented>
-            <Buttons type="contact">
-              <StyledIcon>
-                <ServiceIcon4 />
-              </StyledIcon>
-              Colaborative teams
-            </Buttons>
-            <Buttons type="contact">
-              <StyledIcon>
-                <ServiceIcon3 />
-              </StyledIcon>
-              For Design
-            </Buttons>
-            <Buttons type="contact">
-              <StyledIcon>
-                <ServiceIcon5 />
-              </StyledIcon>
-              Cybersecurity
-            </Buttons>
-          </Segmented>
-          {/* SEGMENTED 3 ......................... */}
-          <Segmented>
-            <Buttons type="contact">
-              <StyledIcon>
-                <ServiceIcon3 />
-              </StyledIcon>
-              Powerful APIs
-            </Buttons>
-            <Buttons type="contact">
-              <StyledIcon>
-                <ServiceIcon1 />
-              </StyledIcon>
-              For Design
-            </Buttons>
-            <Buttons type="contact">
-              <StyledIcon>
-                <ServiceIcon5 />
-              </StyledIcon>
-              Cybersecurity
-            </Buttons>
-          </Segmented>
-        </ServiceLayout>
-        {/* TEAM LAYOUT ................... */}
-        <TeamLayout>
-          <TeamText>
-            <Heading type="ServiceText">For growing teams</Heading>
-            <Text type="Para7"> Tailored support to give you progress</Text>
-          </TeamText>
-          <TeamIconLayout>
-            <IconLayout>
-              <TeamIcon />
-            </IconLayout>
-            {/* BUTTON .............. */}
-            <TeamButtonLayout>
-              <Buttons type="TeamBtn">
+              <Text type="Para7">
+                {" "}
+                Streamlining solutions for swift success
+              </Text>
+            </TeamText>
+            {/* SEGMENTED 1 ......................... */}
+            <Segmented>
+              <Buttons type="contact">
                 <StyledIcon>
-                  <TeamIcon2 />
+                  <ServiceIcon1 />
                 </StyledIcon>
-                Invite user to this team
+                Powerful APIs
               </Buttons>
-            </TeamButtonLayout>
-          </TeamIconLayout>
-        </TeamLayout>
-      </CalendarLayout>
-    </BentoLayout>
+              <Buttons type="contact">
+                <StyledIcon>
+                  <ServiceIcon2 />
+                </StyledIcon>
+                For Design
+              </Buttons>
+              <Buttons type="contact">
+                <StyledIcon>
+                  <ServiceIcon3 />
+                </StyledIcon>
+                Cybersecurity
+              </Buttons>
+            </Segmented>
+            {/* SEGMENTED 2 ......................... */}
+            <Segmented>
+              <Buttons type="contact">
+                <StyledIcon>
+                  <ServiceIcon4 />
+                </StyledIcon>
+                Colaborative teams
+              </Buttons>
+              <Buttons type="contact">
+                <StyledIcon>
+                  <ServiceIcon3 />
+                </StyledIcon>
+                For Design
+              </Buttons>
+              <Buttons type="contact">
+                <StyledIcon>
+                  <ServiceIcon5 />
+                </StyledIcon>
+                Cybersecurity
+              </Buttons>
+            </Segmented>
+            {/* SEGMENTED 3 ......................... */}
+            <Segmented>
+              <Buttons type="contact">
+                <StyledIcon>
+                  <ServiceIcon3 />
+                </StyledIcon>
+                Powerful APIs
+              </Buttons>
+              <Buttons type="contact">
+                <StyledIcon>
+                  <ServiceIcon1 />
+                </StyledIcon>
+                For Design
+              </Buttons>
+              <Buttons type="contact">
+                <StyledIcon>
+                  <ServiceIcon5 />
+                </StyledIcon>
+                Cybersecurity
+              </Buttons>
+            </Segmented>
+          </ServiceLayout>
+          {/* TEAM LAYOUT ................... */}
+          <TeamLayout>
+            <TeamText>
+              <Heading type="ServiceText">For growing teams</Heading>
+              <Text type="Para7"> Tailored support to give you progress</Text>
+            </TeamText>
+            <TeamIconLayout>
+              <IconLayout>
+                <TeamIcon />
+              </IconLayout>
+              {/* BUTTON .............. */}
+              <TeamButtonLayout>
+                <Buttons type="TeamBtn">
+                  <StyledIcon>
+                    <TeamIcon2 />
+                  </StyledIcon>
+                  Invite user to this team
+                </Buttons>
+              </TeamButtonLayout>
+            </TeamIconLayout>
+          </TeamLayout>
+          {/* POWERFULL LAYOUT ................ */}
+          <TeamLayout>
+            <PowerfulLayout>
+              <TeamText>
+                <Heading type="ServiceText">Ready to go services</Heading>
+                <Text type="Para7">
+                  {" "}
+                  Streamlining solutions for swift success
+                </Text>
+              </TeamText>
+              <ApiLayout>
+                <Text type="Para7">{api}</Text>
+              </ApiLayout>
+            </PowerfulLayout>
+          </TeamLayout>
+        </CalendarLayout>
+      </BentoLayout>
+    </div>
   );
 };
 

@@ -101,6 +101,7 @@ const PowerfulLayout = styled.div`
   gap: 27px;
   padding: 24px 0px;
   border: 1px solid #d3d3d6;
+  border-radius: 16px;
 `;
 const ApiLayout = styled.div`
   width: 342px;
@@ -114,6 +115,7 @@ const BestLayout = styled.div`
   gap: 27px;
   padding: 24px 0px;
   border: 1px solid #d3d3d6;
+  border-radius: 16px;
 `;
 const ButtonLayout = styled.div`
   width: auto;
@@ -161,6 +163,7 @@ const Label = styled.label`
   font-size: 14px;
   line-height: 22.4px;
   font-family: Manrope;
+  color: #0D0E14;
 `;
 const Input = styled.input`
   width: 90%;
@@ -169,6 +172,8 @@ const Input = styled.input`
   border: none;
   padding: 12px 18px;
   outline: none;
+  color: #4D4F5C;
+
 `;
 const TextArea = styled.textarea`
   width: 90%;
@@ -177,6 +182,7 @@ const TextArea = styled.textarea`
   border: none;
   padding: 12px 18px;
   outline: none;
+  color: #4D4F5C;
 `
 
 const Bento = () => {
@@ -340,7 +346,7 @@ const Bento = () => {
           <FormLayout>
             <FormText>
               <Heading type="h3">Get in touch</Heading>
-              <Text>Contact us for additional details or assistance.</Text>
+              <Text type="Para2">Contact us for additional details or assistance.</Text>
             </FormText>
             <Form>
               <InputField>

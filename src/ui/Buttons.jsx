@@ -25,6 +25,13 @@ const Buttons = styled.button`
       background-color: white;
     `}
     ${(props) =>
+    props.type === "submit" &&
+    css`
+    width: auto;
+    background-color: #0D0E14;
+      color: var(--colors-alias-black-white-black-900, #FFFFFF);
+    `}
+    ${(props) =>
     props.type === "TeamBtn" &&
     css`
       width: 206.5px;

@@ -32,7 +32,7 @@ const BentoParaContainer = styled.div`
 `;
 const CalendarLayout = styled.div`
   width: auto;
-  height: 1902px;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -107,19 +107,76 @@ const ApiLayout = styled.div`
   height: 243.6px;
 `;
 const BestLayout = styled.div`
-   width: auto;
+  width: auto;
   height: 380px;
   display: flex;
   flex-direction: column;
   gap: 27px;
   padding: 24px 0px;
   border: 1px solid #d3d3d6;
-`
+`;
 const ButtonLayout = styled.div`
-width: 279px;
-height: 222px;
-display: flex;
-flex-direction: column;
+  width: auto;
+  height: 222px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+`;
+const ButtonContainer = styled.div`
+  width: auto;
+  height: 39px;
+  display: flex;
+  justify-content: space-between;
+`;
+const FormLayout = styled.div`
+  width: auto;
+  height: 637px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+`;
+const FormText = styled.div`
+  width: 360px;
+  height: 124px;
+  text-align: start;
+  gap: 50px;
+  display: flex;
+  flex-direction: column;
+`;
+const Form = styled.form`
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+`;
+const InputField = styled.div`
+  width: 360px;
+  height: auto;
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+`;
+const Label = styled.label`
+  font-size: 14px;
+  line-height: 22.4px;
+  font-family: Manrope;
+`;
+const Input = styled.input`
+  width: 90%;
+  height: 47px;
+  background-color: #f4f4f5;
+  border: none;
+  padding: 12px 18px;
+  outline: none;
+`;
+const TextArea = styled.textarea`
+  width: 90%;
+  height: 182px;
+  background-color: #f4f4f5;
+  border: none;
+  padding: 12px 18px;
+  outline: none;
 `
 
 const Bento = () => {
@@ -138,10 +195,7 @@ const Bento = () => {
           <ServiceLayout>
             <TeamText>
               <Heading type="ServiceText">Ready to go services</Heading>
-              <Text type="Para7">
-                {" "}
-                Streamlining solutions for swift success
-              </Text>
+              <Text type="Para7">Streamlining solutions for swift success</Text>
             </TeamText>
             {/* SEGMENTED 1 ......................... */}
             <Segmented>
@@ -231,7 +285,7 @@ const Bento = () => {
           {/* POWERFULL LAYOUT ................ */}
           <PowerfulLayout>
             <TeamText>
-              <Heading type="ServiceText">Ready to go services</Heading>
+              <Heading type="ServiceText">Powerful APIs for developers</Heading>
               <Text type="Para7">
                 {" "}
                 Streamlining solutions for swift success
@@ -243,19 +297,20 @@ const Bento = () => {
           </PowerfulLayout>
           {/* BLOCKCHAIN LOGOS .................. */}
           <BestLayout>
-          <TeamText>
-              <Heading type="ServiceText">The best blockchains out there</Heading>
+            <TeamText>
+              <Heading type="ServiceText">
+                The best blockchains out there
+              </Heading>
               <Text type="Para7">
                 {" "}
                 Pioneering paths in decentralized solutions
               </Text>
             </TeamText>
-            <BlochainIcons/>
-
+            <BlochainIcons />
           </BestLayout>
           {/* DEVELOPMENT .................... */}
-        <BestLayout>
-        <TeamText>
+          <BestLayout>
+            <TeamText>
               <Heading type="ServiceText">Web 3.0 development</Heading>
               <Text type="Para7">
                 {" "}
@@ -263,10 +318,48 @@ const Bento = () => {
               </Text>
             </TeamText>
             <ButtonLayout>
-              
+              <ButtonContainer>
+                <Buttons type="contact">Web 3.0 development</Buttons>
+                <Buttons type="contact">Growth</Buttons>
+              </ButtonContainer>
+              <ButtonContainer>
+                <Buttons type="contact">APIs</Buttons>
+                <Buttons type="contact">Go-to-Market Solutions</Buttons>
+              </ButtonContainer>
+              <ButtonContainer>
+                <Buttons type="contact">Easy-to-use interface</Buttons>
+                <Buttons type="contact">Scalable</Buttons>
+              </ButtonContainer>
+              <ButtonContainer>
+                <Buttons type="contact">Fast Integrations</Buttons>
+                <Buttons type="contact">Accessibility</Buttons>
+              </ButtonContainer>
             </ButtonLayout>
-
-        </BestLayout>
+          </BestLayout>
+          {/* FORM ............................. */}
+          <FormLayout>
+            <FormText>
+              <Heading type="h3">Get in touch</Heading>
+              <Text>Contact us for additional details or assistance.</Text>
+            </FormText>
+            <Form>
+              <InputField>
+                <Label>Name</Label>
+                <Input type="text" placeholder="Name" />
+              </InputField>
+              <InputField>
+                <Label>E-mail</Label>
+                <Input type="email" placeholder="E-mail" />
+              </InputField>
+              <InputField>
+                <Label>Message</Label>
+                <TextArea typeof="text" placeholder="Add your message"/>
+              </InputField>
+              <Buttons type="submit">
+              Submit
+              </Buttons>
+            </Form>
+          </FormLayout>
         </CalendarLayout>
       </BentoLayout>
     </div>

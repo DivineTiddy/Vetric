@@ -134,6 +134,16 @@ const Heading = styled.h1`
       font-weight: 400;
       line-height: normal;
     `}
+    ${(props) =>
+    props.type === "h3" &&
+    css`
+      color: var(--colors-alias-black-white-black-800, #0d0e14);
+      font-family: Manrope;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 48px; /* 120% */
+    `}
 `;
 
 export default Heading;

@@ -5,8 +5,6 @@ import ListOfPrice from "./ListOfPrice";
 import Buttons from "../../ui/Buttons";
 import Arrow from "../../assets/icons/Arrow";
 
-
-
 const PriceLayout = styled.div`
   display: flex;
   flex-direction: column;
@@ -55,11 +53,19 @@ const PlansLayout = styled.ul`
   width: auto;
   display: flex;
   height: auto;
-  padding: 20px;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  align-self: stretch;
+  padding: 20px 0px;
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* @media (min-width: 700px) {
+    flex-direction: row;
+  } */
+  /* 
+  @media (min-width: 700px) {
+    flex-direction: row;
+    gap: 32px;
+  } */
 `;
 const TestEnvironment = styled.div`
   display: flex;
@@ -69,20 +75,39 @@ const TestEnvironment = styled.div`
   width: auto;
   height: 249px;
   border: 1px solid var(--colors-alias-black-white-black-400, #d3d3d6);
-  flex-wrap: wrap;
-  padding: 24px;
+  /* flex-wrap: wrap; */
+  padding: 20px 0px;
   border-radius: 16px;
+
+  @media (min-width: 700px) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 142px;
+    width: 100%;
+
+  }
 `;
 const TextContainer = styled.div`
-  width: auto;
+  width: 342px;
   height: 121px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media (min-width: 700px) {
+    width: 506px;
+    height: 93px;
+  }
 `;
 const StyleArrow = styled.div`
   width: 6px;
   height: auto;
+`;
+const ButtonContainer = styled.div`
+  @media (min-width: 700px) {
+    width: 151px;
+    height: 40px;
+  }
 `;
 
 const Pricing = () => {
@@ -103,7 +128,9 @@ const Pricing = () => {
       {/* PRICE LIST ................. */}
       <PlansLayout>
         <ListOfPrice />
-        {/* TEST ENVIROMENT .................. */}
+      </PlansLayout>
+      {/* TEST ENVIROMENT .................. */}
+      <PlansLayout>
         <TestEnvironment>
           <TextContainer>
             <Heading>Unlock the Power of Web3 Today!</Heading>
@@ -111,12 +138,14 @@ const Pricing = () => {
               Join us on the journey to the decentralized future.
             </Text>
           </TextContainer>
-          <Buttons type="active">
-            Get Started with
-            <StyleArrow>
-              <Arrow />
-            </StyleArrow>
-          </Buttons>
+          <ButtonContainer>
+            <Buttons type="active">
+              Get Started with
+              <StyleArrow>
+                <Arrow />
+              </StyleArrow>
+            </Buttons>
+          </ButtonContainer>
         </TestEnvironment>
       </PlansLayout>
     </PriceLayout>

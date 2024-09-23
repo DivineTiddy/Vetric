@@ -12,10 +12,10 @@ import TeamIcon from "../../assets/icons/TeamIcon";
 import TeamIcon2 from "../../assets/icons/TeamIcon2";
 import BlochainIcons from "../../assets/icons/BlochainIcons";
 const api =
-  " // SPDX-License-Identifier: MITpragma solidity ^0.8.0; import ./IERC20.sol ;contract MyToken is IERC20 {    string public name = MyToken;    string public symbol = MT;    uint256 public override totalSupply;    mapping(address => uint256) public override balanceOf;    mapping(address => mapping(address => uint256)) public override allowance;";
+  "  SPDX-License-Identifier: MITpragma solidity ^0.8.0; import ./IERC20.sol ;contract MyToken is IERC20 {    string public name = MyToken;    string public symbol = MT;    uint256 public override totalSupply;    mapping(address => uint256) public override balanceOf;    mapping(address => mapping(address => uint256)) public override allowance;";
 const BentoLayout = styled.div`
   width: auto;
-  height: 2091px;
+  height: auto;
   display: flex;
   align-content: center;
   gap: 53px;
@@ -34,9 +34,13 @@ const CalendarLayout = styled.div`
   width: auto;
   height: auto;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
+  justify-content: center;
   align-items: center;
   gap: 32px;
+  flex-wrap: wrap;
+  /* @media (min-width: 700px) {
+  } */
 `;
 const ServiceLayout = styled.div`
   width: 340px;
@@ -46,15 +50,17 @@ const ServiceLayout = styled.div`
   flex-direction: column;
   overflow: hidden;
   padding: 24px 0px;
+  border: 1px solid #d3d3d6;
+  border-radius: 16px;
 `;
-// const TextLayout = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   text-align: start !important;
-//   width: auto;
-//   height: 61.4px;
-//   gap: 16px;
-// `;
+//  const TextLayout = styled.div`
+//    display: flex;
+//    flex-direction: column;
+//    text-align: start !important;
+//    width: auto;
+//    height: 61.4px;
+//    gap: 16px;
+//  `;
 const StyledIcon = styled.div`
   width: 18.45px;
   height: 14.76px;
@@ -129,65 +135,88 @@ const ButtonContainer = styled.div`
   height: 39px;
   display: flex;
   justify-content: space-between;
-`;
-const FormLayout = styled.div`
-  width: auto;
-  height: 637px;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-`;
-const FormText = styled.div`
-  width: 360px;
-  height: 124px;
-  text-align: start;
-  gap: 50px;
-  display: flex;
-  flex-direction: column;
-`;
-const Form = styled.form`
-  width: auto;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-`;
-const InputField = styled.div`
-  width: 360px;
-  height: auto;
-  display: flex;
-  gap: 8px;
-  flex-direction: column;
-`;
-const Label = styled.label`
-  font-size: 14px;
-  line-height: 22.4px;
-  font-family: Manrope;
-  color: #0D0E14;
-`;
-const Input = styled.input`
-  width: 90%;
-  height: 47px;
-  background-color: #f4f4f5;
-  border: none;
-  padding: 12px 18px;
-  outline: none;
-  color: #4D4F5C;
+ `;
+ const FormLayout = styled.div`
+   width: auto;
+   height: 637px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 32px;
+   
+  @media (min-width: 700px) {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 32px;
+    align-items: start;
+  }
+ `;
+ const FormText = styled.div`
+   width: 360px;
+   height: 124px;
+   gap: 50px;
+   display: flex;
+   flex-direction: column;
+   text-align: start;
+   @media (min-width: 700px) {
+    width: 45%;
+    justify-content: start;
+  }
+ `;
+ const Form = styled.form`
+   width: auto;
+   height: auto;
+   display: flex;
+   flex-direction: column;
+   gap: 24px;
+   @media (min-width: 700px) {
+    width: 45%;
+  }
+ `;
+ const InputField = styled.div`
+   width: 360px;
+   height: auto;
+   display: flex;
+   gap: 8px;
+   flex-direction: column;
+   @media (min-width: 700px) {
+    width: 100%;
+  }
+ `;
+ const Label = styled.label`
+   font-size: 14px;
+   line-height: 22.4px;
+   font-family: Manrope;
+   color: #0D0E14;
+ `;
+ const Input = styled.input`
+   width: 90%;
+   height: 47px;
+   background-color: #f4f4f5;
+   border: none;
+   padding: 12px 18px;
+   outline: none;
+   color: #4D4F5C;
+   @media (min-width: 700px) {
+    width: auto;
+  }
 
-`;
-const TextArea = styled.textarea`
-  width: 90%;
-  height: 182px;
-  background-color: #f4f4f5;
-  border: none;
-  padding: 12px 18px;
-  outline: none;
-  color: #4D4F5C;
+ `;
+ const TextArea = styled.textarea`
+   width: 90%;
+   height: 182px;
+   background-color: #f4f4f5;
+   border: none;
+   padding: 12px 18px;
+   outline: none;
+   color: #4D4F5C;
+   @media (min-width: 700px) {
+    width: auto;
+  }
 `
 
 const Bento = () => {
   return (
-    <div>
       <BentoLayout>
         {/* HEADING ..................... */}
         <BentoParaContainer>
@@ -342,8 +371,10 @@ const Bento = () => {
               </ButtonContainer>
             </ButtonLayout>
           </BestLayout>
-          {/* FORM ............................. */}
-          <FormLayout>
+         
+        </CalendarLayout>
+         {/* FORM ............................. */}
+           <FormLayout>
             <FormText>
               <Heading type="h3">Get in touch</Heading>
               <Text type="Para2">Contact us for additional details or assistance.</Text>
@@ -365,10 +396,8 @@ const Bento = () => {
               Submit
               </Buttons>
             </Form>
-          </FormLayout>
-        </CalendarLayout>
+          </FormLayout> 
       </BentoLayout>
-    </div>
   );
 };
 

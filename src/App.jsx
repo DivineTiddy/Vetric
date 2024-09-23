@@ -1,10 +1,12 @@
 import styled from "styled-components";
 import Header from "./features/header/Header";
 import Main from "./features/content/Main";
+import FooterSection from "./features/footer/FooterSection";
 
 const StyleApp = styled.div`
   width: 100%;
-  height: 419.6875rem;
+  height: auto;
+ 
 `;
 
 function App() {
@@ -14,6 +16,7 @@ function App() {
       <StyleApp>
         <Header />
         <Main />
+        <FooterSection/>
       </StyleApp>
     
   );

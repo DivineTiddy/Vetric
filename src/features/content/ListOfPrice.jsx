@@ -40,6 +40,7 @@ const AmountLayout = styled.div`
   align-items: flex-start;
   flex-shrink: 0;
   align-self: stretch;
+  width: 342px;
 `;
 const Benefits = styled.ul`
   display: flex;

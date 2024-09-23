@@ -6,22 +6,25 @@ import Pricing from "./Pricing";
 import Bento from "./Bento";
 
 const MainContent = styled.div`
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 83px;
-  margin: 32.8px 0px
-  
+  margin: 32.8px 0px;
+  @media (min-width: 700px) {
+    gap: 124px;
+
+  }
 `;
 const Main = () => {
-  return(
+  return (
     <MainContent>
-  <Herro/>
-  <Perks/>
-  <Companies/>
-  <Pricing/>
-  <Bento/>
-  </MainContent>
+      <Herro />
+      <Perks />
+      <Companies />
+      <Pricing />
+      <Bento />
+    </MainContent>
   );
 };
 

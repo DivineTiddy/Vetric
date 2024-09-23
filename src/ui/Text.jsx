@@ -55,7 +55,7 @@ ${(props) =>
       
     `}
     ${(props) =>
-    props.type === "para6" &&
+    props.type === "Para6" &&
     css`
       color: var(--colors-alias-black-white-black-800, #0d0e14);
       font-family: Manrope;
@@ -70,6 +70,16 @@ ${(props) =>
       color: var(--colors-alias-black-white-black-800, #4D4F5C);
       font-family: Manrope;
       font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22.4px;
+    `}
+    ${(props) =>
+    props.type === "Para8" &&
+    css`
+      color: var(--colors-alias-black-white-black-800, #1A1C29);
+      font-family: Manrope;
+      font-size: 14px;
       font-style: normal;
       font-weight: 400;
       line-height: 22.4px;

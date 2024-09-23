@@ -15,29 +15,36 @@ const HeaderNav = styled.div`
   border-bottom: 1px solid var(--colors-alias-black-white-black-200, #a6a7ad);
   background: var(--colors-alias-black-white-white, #fff);
   backdrop-filter: blur(5.449999809265137px);
-
 `;
 const LogoContainer = styled.div`
   width: 160px;
   height: 35.31px;
 `;
 const MenuBarLayout = styled.div`
-  width: 100%;
+  width: 40px;
   height: 35;
+
   @media (min-width: 700px) {
     display: none;
   }
 `;
 const SocialContent = styled.div`
+  display: none;
   @media (min-width: 700px) {
     width: 446px;
     height: 39px;
+    display: flex;
+
   }
 `;
 const UserLayout = styled.div`
-  width: 118px;
-  height: 40px;
-`
+  display: none;
+  @media (min-width: 700px) {
+    display: flex;
+    width: 118px;
+    height: 40px;
+  }
+`;
 
 const Header = () => {
   return (
@@ -49,13 +56,11 @@ const Header = () => {
         <MenuBar />
       </MenuBarLayout>
       <SocialContent>
-        <Nav/>
+        <Nav />
       </SocialContent>
-     <UserLayout>
-     <Buttons type="active">
-     Sign up
-      </Buttons>
-     </UserLayout>
+      <UserLayout>
+        <Buttons type="active">Sign up</Buttons>
+      </UserLayout>
     </HeaderNav>
   );
 };

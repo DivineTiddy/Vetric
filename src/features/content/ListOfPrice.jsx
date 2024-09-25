@@ -98,7 +98,7 @@ const ListOfPrice = () => {
             <Text type="para4">${items.amount} /month</Text>
             <Text type="para5">{items.info}</Text>
 
-            <Buttons type="contact">
+            <Buttons type={items.plan === "Pro" ? "active" : "contact"}>
               Get Started with {items.plan}{" "}
               <StyleArrow>
                 <Arrow />

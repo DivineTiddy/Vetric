@@ -85,6 +85,30 @@ const Perks = () => {
           Exchange data seamlessly between applications for collaboration.
         </Text>
       </PerksList>
+       {/* FOURTH LIST ............................. */}
+       <PerksList>
+        <Section>
+          <StyleSvg>
+            <Data />
+          </StyleSvg>
+          <Heading as="h5">Asset Tokenization</Heading>
+        </Section>
+        <Text type="Para1">
+        Digitally tokenize real-world assets for efficient management.
+        </Text>
+      </PerksList>
+       {/* FOURTH LIST ............................. */}
+       <PerksList>
+        <Section>
+          <StyleSvg>
+            <Data />
+          </StyleSvg>
+          <Heading as="h5">Community Governance</Heading>
+        </Section>
+        <Text type="Para1">
+        Participate in decentralized decision-making through voting.
+        </Text>
+      </PerksList>
     </PerksLayout>
   );
 };

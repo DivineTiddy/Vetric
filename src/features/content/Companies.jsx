@@ -18,6 +18,10 @@ const IconsLayout = styled.div`
   width: 726.773px;
   justify-content: space-between;
   align-items: center;
+  @media (min-width: 1200px) {
+    width: 1100.773px;
+
+  }
 `;
 const Companies = () => {
   return (
@@ -30,6 +34,8 @@ const Companies = () => {
         <Logo4 />
         <Logo1 />
         <Logo2 />
+        <Logo3 />
+
       </IconsLayout>
     </CompaniesLayout>
   );

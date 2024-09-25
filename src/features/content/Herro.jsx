@@ -9,7 +9,9 @@ const HerroContainer = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 23px;
+  background-image: linear-gradient(to top , #FFFFFF , rgba(234, 251, 224, 1));
 `;
+
 const ButtonLayout = styled.div`
   display: flex;
   align-items: flex-start;

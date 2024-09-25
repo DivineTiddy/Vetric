@@ -4,6 +4,7 @@ import Text from "../../ui/Text";
 import ListOfPrice from "./ListOfPrice";
 import Buttons from "../../ui/Buttons";
 import Arrow from "../../assets/icons/Arrow";
+import { useState } from "react";
 
 const PriceLayout = styled.div`
   display: flex;
@@ -36,19 +37,19 @@ const DateLayout = styled.div`
   border: 1px solid var(--colors-alias-black-white-black-400, #4d4f5c);
   background: var(--colors-alias-black-white-black-900, #07070a);
 `;
-const DateButton = styled.div`
-  color: var(--colors-alias-black-white-white, #fff);
-  font-family: Manrope;
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 130%; /* 16.9px */
-`;
-const ActiveDateButton = styled.button`
-  padding: 3px 8px;
-  border-radius: 100px;
-  background: var(--colors-alias-black-white-white, #fff);
-`;
+// const DateButton = styled.div`
+//   color: var(--colors-alias-black-white-white, #fff);
+//   font-family: Manrope;
+//   font-size: 13px;
+//   font-style: normal;
+//   font-weight: 400;
+//   line-height: 130%; /* 16.9px */
+// `;
+// const ActiveDateButton = styled.button`
+//   padding: 3px 8px;
+//   border-radius: 100px;
+//   background: var(--colors-alias-black-white-white, #fff);
+// `;
 const PlansLayout = styled.ul`
   width: auto;
   display: flex;
@@ -58,6 +59,10 @@ const PlansLayout = styled.ul`
   gap: 32px;
   flex-wrap: wrap;
   justify-content: center;
+  /* &:hover{
+    filter: blur(10px);
+    transform: scale(0.9, 0.9);
+  } */
   /* @media (min-width: 700px) {
     flex-direction: row;
   } */
@@ -85,7 +90,6 @@ const TestEnvironment = styled.div`
     align-items: center;
     height: 142px;
     width: 100%;
-
   }
 `;
 const TextContainer = styled.div`
@@ -111,6 +115,20 @@ const ButtonContainer = styled.div`
 `;
 
 const Pricing = () => {
+  const [Month, setMonth] = useState(false);
+  const [Year, setYear] = useState(true);
+
+  function HandleMonth() {
+    setYear(false);
+    setMonth(true);
+  }
+  function HandleYear() {
+    setYear(true);
+    setMonth(false);
+  }
+  console.log(Month);
+  console.log(Year);
+
   return (
     <PriceLayout>
       <PriceContainer>
@@ -120,8 +138,19 @@ const Pricing = () => {
             Explore our pricing plans tailored to fit your needs.
           </Text>
           <DateLayout>
-            <DateButton>Montly</DateButton>
-            <ActiveDateButton>Yearly •20% off</ActiveDateButton>
+            <Buttons
+              type={Month ? "ActivePrice" : "NotActivePrice"}
+              onClick={HandleMonth}
+            >
+              Montly
+              {Month ? "•10% off" : ""}
+            </Buttons>
+            <Buttons
+              type={Year ? "ActivePrice" : "NotActivePrice"}
+              onClick={HandleYear}
+            >
+              Yearly {Year ? "•20% off" : ""}
+            </Buttons>
           </DateLayout>
         </ExpolreContainer>
       </PriceContainer>

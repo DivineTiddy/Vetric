@@ -126,8 +126,7 @@ const Pricing = () => {
     setYear(true);
     setMonth(false);
   }
-  console.log(Month);
-  console.log(Year);
+
 
   return (
     <PriceLayout>

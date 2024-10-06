@@ -21,9 +21,9 @@ const PriceList = styled.li`
   border: 0.5px solid var(--colors-alias-black-white-black-200, #a6a7ad);
   background: var(--colors-alias-black-white-white, #fff);
   backdrop-filter: blur(12.899999618530273px);
-  &:hover{
+  /* &:hover{
     transform: scale(1.1, 1.1);
-  }
+  } */
   /* @media (min-width: 700px) {
     width: auto;
 

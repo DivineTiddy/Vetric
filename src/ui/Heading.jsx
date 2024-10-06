@@ -15,6 +15,7 @@ const Heading = styled.h1`
       font-size: 47.316px;
       font-style: normal;
       font-weight: 900;
+      padding-top: 50px;
       line-height: 61.3px; /* 129.555% */
     `}
   ${(props) =>

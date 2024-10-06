@@ -83,6 +83,13 @@ ${(props) =>
       font-style: normal;
       font-weight: 400;
       line-height: 22.4px;
+      transition: color 0.3s ease;
+      cursor: pointer;
+      &:hover{
+        text-decoration: underline;
+        text-decoration-color:#96ea63;
+      }
+
     `}
 `
 

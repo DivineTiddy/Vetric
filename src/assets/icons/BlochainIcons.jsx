@@ -10,15 +10,15 @@ const rotate = keyframes`
 
 `
 const Layout = styled.div`
-  width: 342px;
-  height: 223px;
+  width: auto;
+  height: auto;
   animation: ${rotate} 10s linear infinite; /* Animation properties */
 
 `;
 const BlochainIcons = () => {
   return (
    <Layout>
-    <img src={blockchainImages}/>
+    <img style={{width:"auto"}} src={blockchainImages}/>
    </Layout>
   );
 };

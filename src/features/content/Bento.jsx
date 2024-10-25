@@ -24,7 +24,7 @@ const BentoLayout = styled.div`
 `;
 const BentoParaContainer = styled.div`
   width: auto;
-  height: 136px;
+  height: auto;
   display: flex;
   flex-direction: column;
   gap: 37px;
@@ -153,7 +153,7 @@ const ButtonContainer = styled.div`
  `;
  const FormText = styled.div`
    width: 360px;
-   height: 124px;
+   height: auto;
    gap: 50px;
    display: flex;
    flex-direction: column;

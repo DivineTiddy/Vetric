@@ -49,7 +49,7 @@ const LogoContainer = styled.div`
   height: 35.31px;
 `;
 const MenuBarLayout = styled.div`
-  width: 40px;
+  width: auto;
   height: 35;
   cursor: pointer;
 

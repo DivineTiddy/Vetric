@@ -6,19 +6,15 @@ import FooterSection from "./features/footer/FooterSection";
 const StyleApp = styled.div`
   width: 100%;
   height: auto;
- 
 `;
 
 function App() {
-  
   return (
-    
-      <StyleApp>
-        <Header />
-        <Main />
-        <FooterSection/>
-      </StyleApp>
-    
+    <StyleApp>
+      <Header />
+      <Main />
+      <FooterSection />
+    </StyleApp>
   );
 }
 
